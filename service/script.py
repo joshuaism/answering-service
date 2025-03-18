@@ -6,8 +6,19 @@ import wolframalpha
 from mysay import print_say
 from mysr import voice_to_text
 
+# set the input and output devices this script will listen and output to
+# a list of your system devices can be found by running service\devices.py
 INPUT_DEVICE = "Stereo Mix (Realtek(R) Audio)"
 OUTPUT_DEVICE = "CABLE Input (VB-Audio Virtual Cable)"
+
+# set your personal information here
+FIRST_NAME = "Josh"
+LAST_NAME = "Riffel"
+NEAREST_METRO = "Houston"
+CITY = "Friendswood"
+STATE = "Texas"
+
+# set your api key from https://www.wolframalpha.com/
 APIkey = os.environ.get('WOLFRAM_ALPHA_API_KEY')
 wolf = wolframalpha.Client(APIkey)
 
@@ -71,13 +82,13 @@ def process_tokens(inp, file=None):
 def run_script(caller):
     file = open("file.txt", "w", encoding='utf8')
     file.write(f"Answered call from {caller}\n")
-    print_say_write("""Hello, this is the Josh Riffel Job Bot.
-        This conversation is being transcribed and your responses will be forwarded to Josh Riffel.
+    print_say_write(f"""Hello, this is the {FIRST_NAME} {LAST_NAME} Job Bot.
+        This conversation is being transcribed and your responses will be forwarded to {FIRST_NAME} {LAST_NAME}.
         If you do not consent to having this conversation recorded, or this is not about a new job or role,
         please hang up now.""")
     print_say_write("Before we start", file=file)
     print_say_write(
-        "Name a few skills Josh will use in this new role.", file=file, halt=False)
+        f"Name a few skills {FIRST_NAME} will use in this new role.", file=file, halt=False)
     inp = get_input(file, caller)
     if inp == "":
         print_say_write(
@@ -91,8 +102,8 @@ def run_script(caller):
 
     time.sleep(.5)
 
-    print_say_write("""Hopefully I've been able to demonstrate some of my ability to you.
-        Josh wrote this service in python in the hope it would save all of us a little bit of time.
+    print_say_write(f"""Hopefully I've been able to demonstrate some of my ability to you.
+        {FIRST_NAME} wrote this service in python in the hope it would save all of us a little bit of time.
         So let's get to this real quick.""", file=file)
 
     print_say_write(
@@ -101,7 +112,7 @@ def run_script(caller):
     print_say_write(random.choice(chats["_acknowledged"]), file=file)
 
     print_say_write(
-        "Josh is currently working remote and resides near Houston Texas", file=file)
+        f"{FIRST_NAME} is currently working remote and resides near {NEAREST_METRO} {STATE}", file=file)
     print_say_write("Is this a remote, hybrid, or onsite role?",
                     file=file, halt=False)
 
@@ -112,8 +123,8 @@ def run_script(caller):
         print_say_write("That's great to hear! But regardless", file=file)
     print_say_write("What city is the role located in?", file=file, halt=False)
     inp = get_input(file, caller)
-    if "houston" not in inp:
-        response = wolf.query(f"how far is {inp} from friendswood texas")
+    if NEAREST_METRO.lower() not in inp:
+        response = wolf.query(f"how far is {inp} from {CITY} {STATE}".lower())
         try:
             ans = next(response.results).text
             print(ans)
@@ -130,21 +141,21 @@ def run_script(caller):
                         file=file)
                 else:
                     print_say_write(f"""That's at least {distance} miles away! 
-                        Josh can't relocate at this time so this is not very promising news.""",
+                        {FIRST_NAME} can't relocate at this time so this is not very promising news.""",
                                     file=file)
         except (ValueError, StopIteration):
             print_say_write(
-                "I don't know where that is but maybe Josh will look into it.", file=file)
+                f"I don't know where that is but maybe {FIRST_NAME} will look into it.", file=file)
     else:
         print_say_write(
-            "That might work but will depend on what side of Houston it's on.", file=file)
+            f"That might work but will depend on what side of {NEAREST_METRO} it's on.", file=file)
 
     print_say_write("Is this a full time or contract role",
                     file=file, halt=False)
     inp = get_input(file, caller)
     if "contract" in inp:
         print_say_write(
-            "Not ideal, Josh might have some questions about this later", file=file)
+            f"Not ideal, {FIRST_NAME} might have some questions about this later", file=file)
     else:
         print_say_write(random.choice(chats["_acknowledged"]), file=file)
 
@@ -154,14 +165,14 @@ def run_script(caller):
     print_say_write(random.choice(chats["_acknowledged"]), file=file)
 
     print_say_write(
-        "Is there anything else you want Josh to know about this opportunity?", file=file, halt=False)
+        f"Is there anything else you want {FIRST_NAME} to know about this opportunity?", file=file, halt=False)
     inp = get_input(file, caller)
     print_say_write(random.choice(chats["_acknowledged"]), file=file)
 
     print_say_write(
-        "Well that's it for my questions. I've noted your responses and will send them to Josh.", file=file)
+        f"Well that's it for my questions. I've noted your responses and will send them to {FIRST_NAME}.", file=file)
     print_say_write(
-        "You are free to ask me anything about Josh's work history now and I will answer to the best of my ability",
+        f"You are free to ask me anything about {FIRST_NAME}'s work history now and I will answer to the best of my ability",
         file=file)
 
     finished = False
