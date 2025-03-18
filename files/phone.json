@@ -1,0 +1,163 @@
+{
+  "_acknowledged": ["I'm noting that down", "Got it", "Understood", "Uh huh"],
+  "_ask": [
+    "ask away",
+    "any further questions",
+    "what more would you like to know",
+    "what more can I tell you about",
+    "what did you still want to know"
+  ],
+  "_confused": [
+    "I'm not sure how to respond",
+    "I don't have a canned response for that",
+    "but I'm not sure what you mean",
+    "but I can't help you with that just yet",
+    "but I'm just a dumb bot",
+    "but I just don't understand",
+    "but I don't know what that means"
+  ],
+  "_recover": [
+    "Your question is noted and I'll see if Josh can get back to you about it",
+    "I'm still learning so I'll write that down and have Josh get back to you",
+    "I'll let Josh know and maybe he'll teach me how to respond in the future",
+    "I'm still learning so maybe in the future I'll be able to answer that question myself"
+  ],
+  "initialize_conv": ["speak to", "talk to", "on the phone", "call with josh"],
+  "initialize_resp": [
+    "Josh is not available, but you can speak to me",
+    "I'm sorry, he's out.  But I'm authorized to speak on his behalf",
+    "Josh is a very busy man, but I've been programmed to help"
+  ],
+  "space city games": [
+    "At Space City Games, Josh created an app in React for exploring and mapping corporate and political connections between individuals, companies, and organizations.",
+    "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API.",
+    "At Space City Games, Josh published puzzle games to the Google Play Store with leaderboards hosted on AWS using the Java LibGDX framework and Spring Rest Services."
+  ],
+  "spring": [
+    "Josh spent most of his time at expansion refactoring numerous Spring applications as part of the Oracle to my sql migration at B C B S A",
+    "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API."
+  ],
+  "heroku": [
+    "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API."
+  ],
+  "expansion": [
+    "Josh spent most of his time at expansion refactoring numerous Spring applications as part of the Oracle to my sql migration at B C B S A",
+    "Josh's first contract at expansion involved a Spring Boot service and a shelved Docker instance for running python test scripts"
+  ],
+  "halliburton": [
+    "At halliburton, Josh Worked as a team member in the design, development, and debugging of features in the geology module.",
+    "At halliburton, Josh participated in scrum, iteration planning, iteration retrospectives, and code reviews.",
+    "At halliburton, Josh created classes, interfaces, and methods for rendering and manipulating well and geological data in 2D and 3D using Java Graphics",
+    "At halliburton, Josh worked on the Angular front end of a BPM application for well planning"
+  ],
+  "centerpoint": [
+    "At centerpoint energy, Josh wrote MapBasic programs to traverse circuits, create circuit survey maps, and query online APIs to map weather and lightning strike information in the MapInfo GIS environment"
+  ],
+  "c-sharp": [
+    "Josh created an award winning game using c# and xna game studio as part of team wasabi ninja"
+  ],
+  "javascript": [
+    "Josh has used a number of javascript frameworks including react and angular"
+  ],
+  "aws": [
+    "At Space City Games josh used the AWS free tier to host a high scores rest service. His wife made him take it down when a year later the first bill arrived."
+  ],
+  "cloud": [
+    "The cloud is just 'someone else's computer' and josh has deployed numerous applications to remote servers in previous roles. No doubt your cloud is no different but Josh is eager to learn otherwise."
+  ],
+  "dotnet": [
+    "Josh hasn't used it in 10 years, but at family services his primary responsibility was working on a vb.net application"
+  ],
+  "asp.net": [
+    "Josh hasn't used it in 10 years, but at family services his primary responsibility was working on a vb.net application"
+  ],
+  "python": [
+    "Josh created me! the Josh Riffel Job Bot! using python!",
+    "Josh wrote a couple python scripts at his first contract with expansion",
+    "Josh's latest FEC backend client runs on python",
+    "Josh learned python over the years working with the AIY Voice Kit",
+    "Josh has been working on a new voice assistant using python ever since google discontinued support of their AIY Voice kit"
+  ],
+  "liferay": [
+    "From what little exposure to liferay Josh has, it appears to be a lot of overhead for zero utility."
+  ],
+  "websphere": [
+    "From what little exposure to webshere Josh has, it appears to be a lot of overhead for zero utility."
+  ],
+  "linux": [
+    "For a good while Josh used Ubuntu linux as his primary OS",
+    "Josh rewrote a number of KSH scripts at B C B S A that called database stored procedures for batch data processing",
+    "Josh owns a couple of raspberry pies that run linux",
+    "Josh used SSH to deploy various applications to unix servers at B C B S A"
+  ],
+  "django": [
+    "When heroku discontinued their free tier, Josh rewrote his FEC backend in django to deploy on pythonanywhere.com"
+  ],
+  "java": [
+    "Josh has used java professionally for over 12 years",
+    "Josh created a couple of games using the java lib GDX framework and deployed them to the android store.  One used to get over 100 downloads a day.",
+    "Josh spent most of his career at Halliburton Landmark working on the java application Decision Space"
+  ],
+  "angular": [
+    "Josh created a number of Angular applications that can be found at joshuaism dot github.io",
+    "In his last year at Halliburton, Josh worked on the angular front end for the Digital Well Program application"
+  ],
+  "react": [
+    "Recently Josh has been refactoring his FEC client application from angular to react",
+    "To see Josh's new FEC client application written in react, go to joshuaism dot github.io slash react dash fec dash client"
+  ],
+  "selenium": [
+    "This service, The Josh Riffel Job Bot, utilizes selenium to answer google voice calls."
+  ],
+  "sql": [
+    "Josh worked with oracle and mysql doing database migration at expansion",
+    "Josh worked with postgres in his role on the Digital Well Program application at Halliburton",
+    "At Family services, SQL server was the database used in the data track application"
+  ],
+  "sequel": [
+    "Josh worked with oracle and mysql doing database migration at expansion",
+    "Josh worked with postgres in his role on the Digital Well Program application at Halliburton",
+    "At Family services, SQL server was the database used in the data track application"
+  ],
+  "agile": [
+    "At Halliburton, Josh worked in a scrum environment with daily standups and two week iterations tracked in TFS",
+    "At expansion, Josh worked in a scrum environment with daily standups and work was tracked in jira"
+  ],
+  "html5": [
+    "Josh has worked with the canvas element in HTML5 in various projects like his Face Mask App and the Digital Well Program at Halliburton"
+  ],
+  "bootstrap": [
+    "Josh used bootstrap in the Digital Well Program Application at Halliburton",
+    "Josh used bootstrap to manage styling in his Angular FEC Client application"
+  ],
+  "xml": [
+    "Josh used xml in the print templates he created for Decision Space at Halliburton"
+  ],
+  "json": [
+    "Josh handled json responses from the FEC API in his various FEC client applications",
+    "Josh's rest service for his Texas Political Contribution Search serves data in the json format"
+  ],
+  "docker": [
+    "Josh used docker to set up a test environment for a project at expansion"
+  ],
+  "_stop": [
+    "stop",
+    "i'm good",
+    "done",
+    "no thank",
+    "nope",
+    "that's it",
+    "that's all",
+    "ll be all",
+    "ll be about",
+    "ll be it",
+    "d be about",
+    "d be all",
+    "d be it",
+    "all i got",
+    "no more questions",
+    "no questions",
+    "none",
+    "nothing"
+  ]
+}
