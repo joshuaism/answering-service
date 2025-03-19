@@ -1,26 +1,12 @@
-import os
 import random
 import time
 import json
 import wolframalpha
 from mysay import print_say
 from mysr import voice_to_text
+from constants import INPUT_DEVICE, OUTPUT_DEVICE, FIRST_NAME, LAST_NAME, NEAREST_METRO, CITY, STATE, WOLFRAM_ALPHA_API_KEY, ONSITE_COMMUTE, HYBRID_COMMUTE
 
-# set the input and output devices this script will listen and output to
-# a list of your system devices can be found by running service\devices.py
-INPUT_DEVICE = "Stereo Mix (Realtek(R) Audio)"
-OUTPUT_DEVICE = "CABLE Input (VB-Audio Virtual Cable)"
-
-# set your personal information here
-FIRST_NAME = "Josh"
-LAST_NAME = "Riffel"
-NEAREST_METRO = "Houston"
-CITY = "Friendswood"
-STATE = "Texas"
-
-# set your api key from https://www.wolframalpha.com/
-APIkey = os.environ.get('WOLFRAM_ALPHA_API_KEY')
-wolf = wolframalpha.Client(APIkey)
+wolf = wolframalpha.Client(WOLFRAM_ALPHA_API_KEY)
 
 # Open phone.json and put it in a dictionary
 with open('files/phone.json', 'r') as content:
@@ -133,9 +119,9 @@ def run_script(caller):
                 print_say_write(
                     f"So that's about {distance} miles from his current location.  Good to know.", file=file)
             else:
-                if distance < 30:
+                if distance < ONSITE_COMMUTE:
                     print_say_write("That is probably doable", file=file)
-                elif distance < 50:
+                elif distance < HYBRID_COMMUTE:
                     print_say_write(
                         f"That's at least {distance} miles away, but as long as it's not five days a week it might work",
                         file=file)

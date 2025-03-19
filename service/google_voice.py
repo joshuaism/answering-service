@@ -6,19 +6,17 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
+from constants import RECIPIENT_EMAIL, CHROME_DATA_DIRECTORY
 from myemail import email
 from mysay import print_say
 
 from script import run_script
 from thread_with_exception import thread_with_exception
 
-# should look something like C:\Users\<your user>\AppData\Local\Google\Chrome\User Data\ in windows
-data_dir = os.environ.get('CHROME_USER_DATA_PATH')
-
 chrome_options = Options()
 # headless doesn't seem to work, oh well
 # chrome_options.add_argument("-headless")
-chrome_options.add_argument(f"--user-data-dir={data_dir}")
+chrome_options.add_argument(f"--user-data-dir={CHROME_DATA_DIRECTORY}")
 browser = webdriver.Chrome(options=chrome_options)
 
 browser.get(f"https://voice.google.com")
@@ -73,7 +71,7 @@ while True:
         print(e)
 
     subject = f"{caller} call transcript".replace('\n', '').replace('\r', '')
-    email(file="file.txt", name="jobs", subline=subject,
+    email(file="file.txt", recipient=RECIPIENT_EMAIL, subline=subject,
           content="this is what was recorded")
 
     pygame.mixer.quit()
