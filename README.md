@@ -20,6 +20,8 @@ pip install -r requirements.txt
 
 You will need to install chrome, set up a google account, set that google account as the user profile for chrome, and set up google voice for that user profile
 
+You will next need to get a wolframalpha API key for use by the answering service application
+
 Next update constants.py with your personal information and system settings and modify experience.json to fit your work history and skills that you wish to highlight
 
 Then, in google voice, click the headphone icon to set your microphone to match your OUTPUT_DEVICE and speakers to match your INPUT_DEVICE settings in constants.py
