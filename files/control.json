@@ -1,0 +1,51 @@
+{
+  "_acknowledged": ["I'm noting that down", "Got it", "Understood", "Uh huh"],
+  "_ask": [
+    "ask away",
+    "any further questions",
+    "what more would you like to know",
+    "what more can I tell you about",
+    "what did you still want to know"
+  ],
+  "_confused": [
+    "I'm not sure how to respond",
+    "I don't have a canned response for that",
+    "but I'm not sure what you mean",
+    "but I can't help you with that just yet",
+    "but I'm just a dumb bot",
+    "but I just don't understand",
+    "but I don't know what that means"
+  ],
+  "_recover": [
+    "Your question is noted and I'll see if Josh can get back to you about it",
+    "I'm still learning so I'll write that down and have Josh get back to you",
+    "I'll let Josh know and maybe he'll teach me how to respond in the future",
+    "I'm still learning so maybe in the future I'll be able to answer that question myself"
+  ],
+  "_initialize_conv": ["speak to", "talk to", "on the phone", "call with josh"],
+  "_initialize_resp": [
+    "Josh is not available, but you can speak to me",
+    "I'm sorry, he's out.  But I'm authorized to speak on his behalf",
+    "Josh is a very busy man, but I've been programmed to help"
+  ],
+  "_stop": [
+    "stop",
+    "i'm good",
+    "done",
+    "no thank",
+    "nope",
+    "that's it",
+    "that's all",
+    "ll be all",
+    "ll be about",
+    "ll be it",
+    "d be about",
+    "d be all",
+    "d be it",
+    "all i got",
+    "no more questions",
+    "no questions",
+    "none",
+    "nothing"
+  ]
+}

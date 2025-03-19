@@ -9,8 +9,10 @@ from constants import INPUT_DEVICE, OUTPUT_DEVICE, FIRST_NAME, LAST_NAME, NEARES
 wolf = wolframalpha.Client(WOLFRAM_ALPHA_API_KEY)
 
 # Open phone.json and put it in a dictionary
-with open('files/phone.json', 'r') as content:
-    chats = json.load(content)
+with open('files/experience.json', 'r') as content:
+    experience = json.load(content)
+with open('files/control.json', 'r') as other_content:
+    control = json.load(other_content)
 
 
 def contains(str, strings):
@@ -48,21 +50,17 @@ def voice_to_file(file=None, caller="caller"):
 
 
 def process_tokens(inp, file=None):
-    tokens = inp.split(' ')
     token_captured = False
-    if 'space city games' in inp:
-        token_captured = True
-        print_say_write("You mentioned space city games", file=file)
-        print_say_write(random.choice(chats['space city games']), file=file)
-    for key in chats.keys():
-        if key in tokens:
+    formatted_inp = f" {inp} "
+    for key in experience.keys():
+        if f" {key} " in formatted_inp:
             token_captured = True
             print_say_write(f"You mentioned {key}", file=file)
-            print_say_write(random.choice(chats[key]), file=file)
+            print_say_write(random.choice(experience[key]), file=file)
     if not token_captured:
         print_say_write(f"You asked {inp},", file=file)
-        print_say_write(random.choice(chats["_confused"]), file=file)
-        print_say_write(random.choice(chats["_recover"]), file=file)
+        print_say_write(random.choice(control["_confused"]), file=file)
+        print_say_write(random.choice(control["_recover"]), file=file)
 
 
 def run_script(caller):
@@ -81,8 +79,9 @@ def run_script(caller):
             "I didn't hear any response so I'm leaving the conversation, goodbye!", file=file)
         return
     else:
-        if contains(inp, chats["initialize_conv"]):
-            print_say_write(random.choice(chats["initialize_resp"]), file=file)
+        if contains(inp, control["_initialize_conv"]):
+            print_say_write(random.choice(
+                control["_initialize_resp"]), file=file)
         else:
             process_tokens(inp, file=file)
 
@@ -95,7 +94,7 @@ def run_script(caller):
     print_say_write(
         "First off, Who are you and what company do you represent?", file=file)
     inp = get_input(file, caller)
-    print_say_write(random.choice(chats["_acknowledged"]), file=file)
+    print_say_write(random.choice(control["_acknowledged"]), file=file)
 
     print_say_write(
         f"{FIRST_NAME} is currently working remote and resides near {NEAREST_METRO} {STATE}", file=file)
@@ -143,17 +142,17 @@ def run_script(caller):
         print_say_write(
             f"Not ideal, {FIRST_NAME} might have some questions about this later", file=file)
     else:
-        print_say_write(random.choice(chats["_acknowledged"]), file=file)
+        print_say_write(random.choice(control["_acknowledged"]), file=file)
 
     print_say_write("What is the pay rate for this role?",
                     file=file, halt=False)
     inp = get_input(file, caller)
-    print_say_write(random.choice(chats["_acknowledged"]), file=file)
+    print_say_write(random.choice(control["_acknowledged"]), file=file)
 
     print_say_write(
         f"Is there anything else you want {FIRST_NAME} to know about this opportunity?", file=file, halt=False)
     inp = get_input(file, caller)
-    print_say_write(random.choice(chats["_acknowledged"]), file=file)
+    print_say_write(random.choice(control["_acknowledged"]), file=file)
 
     print_say_write(
         f"Well that's it for my questions. I've noted your responses and will send them to {FIRST_NAME}.", file=file)
@@ -163,18 +162,18 @@ def run_script(caller):
 
     finished = False
     while not finished:
-        print_say_write(random.choice(chats["_ask"]), file=file, halt=False)
+        print_say_write(random.choice(control["_ask"]), file=file, halt=False)
         inp = get_input(file, caller)
         if inp == "":
             print_say_write(
                 "I didn't hear any questions so I'm leaving the conversation", file=file)
             return
         else:
-            if contains(inp, chats["_stop"]) or inp == "no":
+            if contains(inp, control["_stop"]) or inp == "no":
                 finished = True
-            elif contains(inp, chats["initialize_conv"]):
+            elif contains(inp, control["_initialize_conv"]):
                 print_say_write(random.choice(
-                    chats["initialize_resp"]), file=file)
+                    control["_initialize_resp"]), file=file)
             else:
                 process_tokens(inp, file)
 
@@ -183,7 +182,7 @@ def run_script(caller):
     print_say_write(
         "Maybe want to tell me how you would rate this experience?", file=file, halt=False)
     inp = get_input(file, caller)
-    print_say_write(random.choice(chats["_acknowledged"]), file=file)
+    print_say_write(random.choice(control["_acknowledged"]), file=file)
     print_say_write("""And with that I would like to thank you for your time."
         Have a great rest of your day.  Goodbye!""", file=file)
 
