@@ -3,7 +3,7 @@ import os
 # constants for sending/recieving emailed transcript files
 SENDER_GMAIL = os.environ.get("GMAIL_ACCT")
 SENDER_GMAIL_PASSWORD = os.environ.get("GMAIL_APP_PW")
-RECIPIENT_EMAIL = 'riffeljobsearch@gmail.com'
+RECIPIENT_EMAIL = 'recipient@email.com'
 
 # constant for chrome user account (for selenium to access google voice)
 # should look something like C:\Users\<your user>\AppData\Local\Google\Chrome\User Data\ in windows
@@ -15,11 +15,11 @@ INPUT_DEVICE = "Stereo Mix (Realtek(R) Audio)"
 OUTPUT_DEVICE = "CABLE Input (VB-Audio Virtual Cable)"
 
 # constants for your personal information used by the answering service script
-FIRST_NAME = "Josh"
-LAST_NAME = "Riffel"
-NEAREST_METRO = "Houston"
-CITY = "Friendswood"
-STATE = "Texas"
+FIRST_NAME = "John"
+LAST_NAME = "Doe"
+NEAREST_METRO = "San Francisco"
+CITY = "Alameda"
+STATE = "California"
 
 # constant to query distance from job location to {CITY} {STATE} in the answering service script
 # set your api key from https://www.wolframalpha.com/
