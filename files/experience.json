@@ -1,117 +1,61 @@
 {
-  "space city games": [
-    "At Space City Games, Josh created an app in React for exploring and mapping corporate and political connections between individuals, companies, and organizations.",
-    "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API.",
-    "At Space City Games, Josh published puzzle games to the Google Play Store with leaderboards hosted on AWS using the Java LibGDX framework and Spring Rest Services."
+  "xyz company": [
+    "At XYZ, John migrated their main application product to the AWS cloud services",
+    "At XYZ, John improved developer productivity by 500%",
+    "At XYZ, John automated the application build process with Jenkins and Github Actions"
   ],
-  "family services": [
-    "At family services, Josh Maintained and added functionality to the web-based application, dataTRAQ using VB and ASP.NET and redesigned the hnef.org website"
+  "company abc": [
+    "At ABC, John Maintained and added functionality to the web-based application, meow meow beans"
   ],
   "spring": [
-    "Josh spent most of his time at expansion refactoring numerous Spring applications as part of the Oracle to my sql migration at B C B S A",
-    "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API."
-  ],
-  "heroku": [
-    "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API."
-  ],
-  "expansion": [
-    "Josh spent most of his time at expansion refactoring numerous Spring applications as part of the Oracle to my sql migration at B C B S A",
-    "Josh's first contract at expansion involved a Spring Boot service and a shelved Docker instance for running python test scripts"
-  ],
-  "halliburton": [
-    "At halliburton, Josh Worked as a team member in the design, development, and debugging of features in the geology module.",
-    "At halliburton, Josh participated in scrum, iteration planning, iteration retrospectives, and code reviews.",
-    "At halliburton, Josh created classes, interfaces, and methods for rendering and manipulating well and geological data in 2D and 3D using Java Graphics",
-    "At halliburton, Josh worked on the Angular front end of a BPM application for well planning"
-  ],
-  "centerpoint": [
-    "At centerpoint energy, Josh wrote MapBasic programs to traverse circuits, create circuit survey maps, and query online APIs to map weather and lightning strike information in the MapInfo GIS environment"
+    "John spent most of his time at Company ABC refactoring numerous Spring applications as part of the Oracle to postgres migration project",
+    "At XYZ Company, John created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API."
   ],
   "c-sharp": [
-    "Josh created an award winning game using c# and xna game studio as part of team wasabi ninja"
+    "John created an award winning application using c# and .net",
+    "John used c# and Unity to develop multiple games you can download on the app store"
   ],
   "javascript": [
-    "Josh has used a number of javascript frameworks including react and angular"
+    "John has used a number of javascript frameworks including react and angular",
+    "John has used vanilla javascript in millions of published webpages"
   ],
   "aws": [
-    "At Space City Games josh used the AWS free tier to host a high scores rest service. His wife made him take it down when a year later the first bill arrived."
+    "John has extensive experience with AWS and other cloud products",
+    "Here's another anecdote about John's experience with AWS",
+    "John made AWS with his two bare hands"
   ],
-  "cloud": [
-    "The cloud is just 'someone else's computer' and josh has deployed numerous applications to remote servers in previous roles. No doubt your cloud is no different but Josh is eager to learn otherwise."
-  ],
-  "dotnet": [
-    "Josh hasn't used it in 10 years, but at family services his primary responsibility was working on a vb.net application"
-  ],
-  "asp.net": [
-    "Josh hasn't used it in 10 years, but at family services his primary responsibility was working on a vb.net application"
-  ],
+  "cloud": ["John loves cloud development, he truely does"],
   "python": [
-    "Josh created me! the Josh Riffel Job Bot! using python!",
-    "Josh wrote a couple python scripts at his first contract with expansion",
-    "Josh's latest FEC backend client runs on python",
-    "Josh learned python over the years working with the AIY Voice Kit",
-    "Josh has been working on a new voice assistant using python ever since google discontinued support of their AIY Voice kit"
-  ],
-  "liferay": [
-    "From what little exposure to liferay Josh has, it appears to be a lot of overhead for zero utility."
-  ],
-  "websphere": [
-    "From what little exposure to webshere Josh has, it appears to be a lot of overhead for zero utility."
+    "John created me! the John Doe Job Bot! using python!",
+    "John wrote a couple python scripts in college",
+    "John is a python wizard"
   ],
   "linux": [
-    "For a good while Josh used Ubuntu linux as his primary OS",
-    "Josh rewrote a number of KSH scripts at B C B S A that called database stored procedures for batch data processing",
-    "Josh owns a couple of raspberry pies that run linux",
-    "Josh used SSH to deploy various applications to unix servers at B C B S A"
+    "John is a mint distro superuser",
+    "John uses ssh to push code to linux servers",
+    "John wrote shell scripts to launch apps on linux servers"
   ],
-  "django": [
-    "When heroku discontinued their free tier, Josh rewrote his FEC backend in django to deploy on pythonanywhere.com"
-  ],
-  "java": [
-    "Josh has used java professionally for over 12 years",
-    "Josh created a couple of games using the java lib GDX framework and deployed them to the android store.  One used to get over 100 downloads a day.",
-    "Josh spent most of his career at Halliburton Landmark working on the java application Decision Space"
-  ],
-  "angular": [
-    "Josh created a number of Angular applications that can be found at joshuaism dot github.io",
-    "In his last year at Halliburton, Josh worked on the angular front end for the Digital Well Program application"
-  ],
-  "react": [
-    "Recently Josh has been refactoring his FEC client application from angular to react",
-    "To see Josh's new FEC client application written in react, go to joshuaism dot github.io slash react dash fec dash client"
-  ],
+  "java": ["John has a bajillion years of professional java experience"],
   "selenium": [
-    "This service, The Josh Riffel Job Bot, utilizes selenium to answer google voice calls."
+    "This service, The John Doe Job Bot, utilizes selenium to answer google voice calls."
   ],
   "sql": [
-    "Josh worked with oracle and my sql doing database migration at expansion",
-    "Josh worked with postgres in his role on the Digital Well Program application at Halliburton",
-    "At Family services, SQL server was the database used in the data track application"
+    "John has lots of experience in sql",
+    "John did this and that with sql",
+    "John is the best at performance tuning sql queries"
   ],
   "sequel": [
-    "Josh worked with oracle and my sql doing database migration at expansion",
-    "Josh worked with postgres in his role on the Digital Well Program application at Halliburton",
-    "At Family services, SQL server was the database used in the data track application"
+    "John has lots of experience in sql",
+    "John did this and that with sql",
+    "John is the best at performance tuning sql queries"
   ],
   "agile": [
-    "At Halliburton, Josh worked in a scrum environment with daily standups and two week iterations tracked in TFS",
-    "At expansion, Josh worked in a scrum environment with daily standups and work was tracked in jira"
-  ],
-  "html5": [
-    "Josh has worked with the canvas element in HTML5 in various projects like his Face Mask App and the Digital Well Program at Halliburton"
-  ],
-  "bootstrap": [
-    "Josh used bootstrap in the Digital Well Program Application at Halliburton",
-    "Josh used bootstrap to manage styling in his Angular FEC Client application"
-  ],
-  "xml": [
-    "Josh used xml in the print templates he created for Decision Space at Halliburton"
+    "John has extensive experience in scrum and safe agile",
+    "John loves agile more than he loves waterfall"
   ],
   "json": [
-    "Josh handled json responses from the FEC API in his various FEC client applications",
-    "Josh's rest service for his Texas Political Contribution Search serves data in the json format"
-  ],
-  "docker": [
-    "Josh used docker to set up a test environment for a project at expansion"
+    "John edited this script in json",
+    "John added keys for array strings as appropriate to match his work experience.",
+    "keys for this script should be in all lower case."
   ]
 }

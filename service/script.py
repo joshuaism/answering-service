@@ -60,7 +60,9 @@ def process_tokens(inp, file=None):
     if not token_captured:
         print_say_write(f"You asked {inp},", file=file)
         print_say_write(random.choice(control["_confused"]), file=file)
-        print_say_write(random.choice(control["_recover"]), file=file)
+        str = random.choice(control["_recover"]).replace(
+            "{FIRST_NAME}", FIRST_NAME)
+        print_say_write(str, file=file)
 
 
 def run_script(caller):
@@ -80,8 +82,9 @@ def run_script(caller):
         return
     else:
         if contains(inp, control["_initialize_conv"]):
-            print_say_write(random.choice(
-                control["_initialize_resp"]), file=file)
+            str = random.choice(control["_initialize_resp"]).replace(
+                "{FIRST_NAME}", FIRST_NAME)
+            print_say_write(str, file=file)
         else:
             process_tokens(inp, file=file)
 
@@ -172,8 +175,9 @@ def run_script(caller):
             if contains(inp, control["_stop"]) or inp == "no":
                 finished = True
             elif contains(inp, control["_initialize_conv"]):
-                print_say_write(random.choice(
-                    control["_initialize_resp"]), file=file)
+                str = random.choice(control["_initialize_resp"]).replace(
+                    "{FIRST_NAME}", FIRST_NAME)
+                print_say_write(str, file=file)
             else:
                 process_tokens(inp, file)
 
