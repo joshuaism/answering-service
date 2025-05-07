@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-from constants import RECIPIENT_EMAIL, CHROME_DATA_DIRECTORY
+from constants import RECIPIENT_EMAIL, CHROME_EXE_PATH, CHROME_DATA_DIRECTORY
 from myemail import email
 from mysay import print_say
 
@@ -14,6 +14,7 @@ from script import run_script
 from thread_with_exception import thread_with_exception
 
 chrome_options = Options()
+chrome_options.add_argument(f"--binary_location={CHROME_DATA_DIRECTORY}")
 # headless doesn't seem to work, oh well
 # chrome_options.add_argument("-headless")
 chrome_options.add_argument(f"--user-data-dir={CHROME_DATA_DIRECTORY}")
