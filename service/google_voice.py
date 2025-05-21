@@ -14,7 +14,7 @@ from script import run_script
 from thread_with_exception import thread_with_exception
 
 chrome_options = Options()
-chrome_options.add_argument(f"--binary_location={CHROME_DATA_DIRECTORY}")
+chrome_options.add_argument(f"--binary_location={CHROME_EXE_PATH}")
 # headless doesn't seem to work, oh well
 # chrome_options.add_argument("-headless")
 chrome_options.add_argument(f"--user-data-dir={CHROME_DATA_DIRECTORY}")
@@ -28,7 +28,7 @@ while True:
     while not button:
         try:
             button = browser.find_element(
-                By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/section/div/div/div/gv-call-response/div/div/button')
+                By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[2]/gv-call-response/div/div[2]/button')
         except NoSuchElementException:
             pass
     print("got a call answer button!")
@@ -36,9 +36,9 @@ while True:
     number = ""
     try:
         caller = browser.find_element(
-            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/section/div/div/div/div[1]/gv-in-call-remote-party/div/div[3]').text
+            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[1]/div/gv-in-call-remote-party/div/div[2]').text
         number = browser.find_element(
-            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/section/div/div/div/div[1]/gv-in-call-remote-party/div/div[4]/span[2]').text
+            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[1]/div/gv-in-call-remote-party/div/div[4]').text
         if number != "":
             caller = f"{caller} {number}"
     except Exception as e:
@@ -56,11 +56,11 @@ while True:
         t1.start()
         # assume the call is active so long as the hang-up button is present
         new_button = browser.find_element(
-            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/section/div/div/div/gv-call-response/div/button')
+            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[2]/gv-call-response/div/div/button')
         while new_button:
             try:
                 new_button = browser.find_element(
-                    By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/section/div/div/div/gv-call-response/div/button')
+                    By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[2]/gv-call-response/div/div/button')
             except NoSuchElementException:
                 print("hang-up button dissappeared! Exit the script thread.")
                 t1.raise_exception()
