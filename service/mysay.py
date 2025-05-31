@@ -1,8 +1,9 @@
 import gsay
+import coquisay
 import pyttsx4say
 
 
-def print_say(text, language='en-US', engine="pyttsx4", halt=True, output=None):
+def print_say(text, language='en-US', engine="default", halt=True, output=None):
     """Uses the specified engine to generate speech from text
     Parameters:
     text (str): the text to output
@@ -12,5 +13,7 @@ def print_say(text, language='en-US', engine="pyttsx4", halt=True, output=None):
     """
     if engine.lower() == "gtts":
         gsay.print_say(text, lang=language, halt=halt, output=output)
-    else:
+    if engine.lower() == "pyttsx4":
         pyttsx4say.print_say(text, language=language, halt=halt, output=output)
+    else:
+        coquisay.print_say(text, language=language, halt=halt, output=output)
