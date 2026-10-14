@@ -4,6 +4,9 @@
     "At Space City Games, Josh created a website for querying and visualizing political donations in Angular using GitHub Pages, Heroku, Spring Boot, and the open FEC Rest API.",
     "At Space City Games, Josh published puzzle games to the Google Play Store with leaderboards hosted on AWS using the java LibGDX framework and Spring Rest Services."
   ],
+  "thunder yard": [
+    "At thunder yard, Josh worked on the green field Scheduling Resource Service Enhancement project using spring boot and A W S"
+  ],
   "family services": [
     "At family services, Josh Maintained and added functionality to the web-based application, dataTRAQ using VB and ASP.NET and redesigned the hnef.org website"
   ],
@@ -34,7 +37,8 @@
     "Josh has used a number of javascript frameworks including react and angular"
   ],
   "aws": [
-    "At Space City Games josh used the AWS free tier to host a high scores rest service. His wife made him take it down when a year later the first bill arrived."
+    "At Space City Games josh used the AWS free tier to host a high scores rest service. His wife made him take it down when a year later the first bill arrived.",
+    "At thunder yard, Josh worked on the green field Scheduling Resource Service Enhancement project using spring boot and A W S"
   ],
   "cloud": [
     "The cloud is just 'someone else's computer' and josh has deployed numerous applications to remote servers in previous roles. No doubt your cloud is no different but Josh is eager to learn otherwise."
@@ -68,9 +72,9 @@
     "When heroku discontinued their free tier, Josh rewrote his FEC backend in django to deploy on pythonanywhere.com"
   ],
   "java": [
-    "Josh has used java professionally for over 12 years",
+    "Josh has used java professionally for over 14 years",
     "Josh created a couple of games using the java lib GDX framework and deployed them to the android store.  One used to get over 100 downloads a day.",
-    "Josh spent most of his career at Halliburton Landmark working on the java application Decision Space"
+    "Josh spent most of his time at Halliburton Landmark working on the java application Decision Space"
   ],
   "angular": [
     "Josh created a number of Angular applications that can be found at joshuaism dot github.io",

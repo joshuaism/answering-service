@@ -189,6 +189,6 @@ def run_script(caller):
 
 if __name__ == '__main__':
     print("starting")
-    INPUT_DEVICE = None
+    INPUT_DEVICE = "Microphone Array (Realtek(R) Audio)"
     OUTPUT_DEVICE = None
     run_script("local test")
