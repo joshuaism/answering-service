@@ -28,21 +28,10 @@ while True:
     while not button:
         try:
             button = browser.find_element(
-                By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[2]/gv-call-response/div/div[2]/button')
+                By.XPATH, '/html/body/div[1]/div[2]/gv-app/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call/div/div/section/div[2]/gv-call-response/div/div[2]/button/mat-icon')
         except NoSuchElementException:
             pass
     print("got a call answer button!")
-    caller = "caller"
-    number = ""
-    try:
-        caller = browser.find_element(
-            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[1]/div/gv-in-call-remote-party/div/div[2]').text
-        number = browser.find_element(
-            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[1]/div/gv-in-call-remote-party/div/div[4]').text
-        if number != "":
-            caller = f"{caller} {number}"
-    except Exception as e:
-        print(e)
     # answer the call
     time.sleep(.6)
     button.click()
@@ -50,17 +39,23 @@ while True:
     print_say("Incoming call", halt=True)
     pygame.mixer.quit()
     time.sleep(.4)
+    caller = "caller"
+    try:
+        caller = browser.find_element(
+            By.XPATH, '/html/body/div[1]/div[2]/gv-app/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call/div/div/section/div[1]/div/gv-in-call-remote-party/div/div[2]').text
+    except Exception as e:
+        print(e)
     try:
         t1 = thread_with_exception(
             'script thread', target=run_script, args=(caller,))
         t1.start()
         # assume the call is active so long as the hang-up button is present
         new_button = browser.find_element(
-            By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[2]/gv-call-response/div/div/button')
+            By.XPATH, '/html/body/div[1]/div[2]/gv-app/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call/div/div/section/div[2]/gv-call-response/div/div/button/mat-icon')
         while new_button:
             try:
                 new_button = browser.find_element(
-                    By.XPATH, '/html/body/div[1]/div[2]/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call-ng2/div/div/section/div[2]/gv-call-response/div/div/button')
+                    By.XPATH, '/html/body/div[1]/div[2]/gv-app/gv-side-panel/mat-sidenav-container/mat-sidenav-content/div/div[2]/gv-call-sidebar/div/gv-in-call/div/div/section/div[2]/gv-call-response/div/div/button/mat-icon')
             except NoSuchElementException:
                 print("hang-up button dissappeared! Exit the script thread.")
                 t1.raise_exception()
